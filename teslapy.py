@@ -13,3 +13,9 @@ def vehicleData():
   r = requests.get("{teslaAPI}/vehicle_data".format(teslaAPI=teslaAPI), headers=teslaHeader)
   print(r.text)
 
+def driveState():
+  r = requests.get("{teslaAPI}/data_request/drive_state".format(teslaAPI=teslaAPI), headers=teslaHeader)
+  print(r.text)
+
+
+print(driveState())
